@@ -22,5 +22,6 @@ Please see `mix/config.txt` for example.
 ### Run
 The direct command to run is:
 `./waf --run 'scratch/third mix/config.txt'`
+
 To start tuning, run:
 `python tuning.py`
