@@ -1,0 +1,673 @@
+# project ns (3.18) configured on Sat Jan 27 14:53:15 2024 by
+# waf 1.7.11 (abi 98, python 20710f0 on linux2)
+# using ./waf configure
+#
+----------------------------------------
+Setting top to
+/home/czt/Desktop/Paraleon
+----------------------------------------
+Setting out to
+/home/czt/Desktop/Paraleon/build
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='CC' -> '/usr/bin/gcc'
+find program=['ar'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='AR' -> '/usr/bin/ar'
+/usr/bin/gcc
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='CXX' -> '/usr/bin/g++'
+(tool ar is already loaded, skipping)
+/usr/bin/g++
+---------------------------------------------------------
+Checking for compilation flag -Wl,--soname=foo... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-Wl,--soname=foo', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+---------------------------------------------------------
+Checking for program python
+/home/czt/anaconda3/envs/python27/bin/python
+find program=['python'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PYTHON' -> '/home/czt/anaconda3/envs/python27/bin/python'
+['/home/czt/anaconda3/envs/python27/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+16
+final
+0
+
+['/home/czt/anaconda3/envs/python27/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/site-packages'
+
+'/usr/local/lib/python2.7/site-packages'
+
+['/home/czt/anaconda3/envs/python27/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/site-packages'
+
+'/usr/local/lib/python2.7/site-packages'
+
+---------------------------------------------------------
+Checking for python version
+(2, 7, 16, 'final', 0)
+['/home/czt/anaconda3/envs/python27/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))"]
+out: '/home/czt/anaconda3/envs/python27'
+'.so'
+'-L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'
+'/home/czt/anaconda3/envs/python27/lib'
+'/home/czt/anaconda3/envs/python27/lib/python2.7/config'
+'/home/czt/anaconda3/envs/python27/include/python2.7'
+1
+''
+'gcc -pthread -shared -B /home/czt/anaconda3/envs/python27/compiler_compat -L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'
+'-fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes'
+
+'/home/czt/anaconda3/envs/python27'
+'.so'
+'-L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'
+'/home/czt/anaconda3/envs/python27/lib'
+'/home/czt/anaconda3/envs/python27/lib/python2.7/config'
+'/home/czt/anaconda3/envs/python27/include/python2.7'
+1
+''
+'gcc -pthread -shared -B /home/czt/anaconda3/envs/python27/compiler_compat -L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'
+'-fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes'
+
+Configuration returned from ['/home/czt/anaconda3/envs/python27/bin/python']:
+"prefix = '/home/czt/anaconda3/envs/python27'\nSO = '.so'\nLDFLAGS = '-L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'\nLIBDIR = '/home/czt/anaconda3/envs/python27/lib'\nLIBPL = '/home/czt/anaconda3/envs/python27/lib/python2.7/config'\nINCLUDEPY = '/home/czt/anaconda3/envs/python27/include/python2.7'\nPy_ENABLE_SHARED = 1\nMACOSX_DEPLOYMENT_TARGET = ''\nLDSHARED = 'gcc -pthread -shared -B /home/czt/anaconda3/envs/python27/compiler_compat -L/home/czt/anaconda3/envs/python27/lib -Wl,-rpath=/home/czt/anaconda3/envs/python27/lib -Wl,--no-as-needed -Wl,--sysroot=/'\nCFLAGS = '-fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes'"
+
+
+
+# Trying default LIBPATH_PYEMBED: ['/home/czt/anaconda3/envs/python27/lib']
+
+---------------------------------------------------------
+Checking for library python2.7 in LIBPATH_PYEMBED
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_2f3f576ea2748ad66aebe13812d34cf5/test.cpp -> build/.conf_check_2f3f576ea2748ad66aebe13812d34cf5/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-fno-strict-aliasing', '-fwrapv', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/site-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_2f3f576ea2748ad66aebe13812d34cf5/testbuild/test.cpp.1.o -> build/.conf_check_2f3f576ea2748ad66aebe13812d34cf5/testbuild/testprog
+[0m
+['/usr/bin/g++', '-Wl,-rpath=/home/czt/anaconda3/envs/python27/lib', '-Wl,--no-as-needed', '-Wl,--sysroot=/', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_2f3f576ea2748ad66aebe13812d34cf5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/home/czt/anaconda3/envs/python27/lib', '-L/home/czt/anaconda3/envs/python27/lib', '-lpython2.7']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program /home/czt/anaconda3/envs/python27/bin/python-config,python2.7-config,python-config-2.7,python2.7m-config
+/home/czt/anaconda3/envs/python27/bin/python-config
+find program=['/home/czt/anaconda3/envs/python27/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PYTHON_CONFIG' -> '/home/czt/anaconda3/envs/python27/bin/python-config'
+['/home/czt/anaconda3/envs/python27/bin/python-config', '--includes']
+out: -I/home/czt/anaconda3/envs/python27/include/python2.7 -I/home/czt/anaconda3/envs/python27/include/python2.7
+
+Include path for Python extensions (found via python-config --includes): ['/home/czt/anaconda3/envs/python27/include/python2.7']
+
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header Python.h
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/test.cpp -> build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-fno-strict-aliasing', '-fwrapv', '-fno-strict-aliasing', '-I/home/czt/anaconda3/envs/python27/include/python2.7', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/site-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/test.cpp.1.o -> build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/testprog
+[0m
+['/usr/bin/g++', '-Wl,-rpath=/home/czt/anaconda3/envs/python27/lib', '-Wl,--no-as-needed', '-Wl,--sysroot=/', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/home/czt/anaconda3/envs/python27/lib', '-lpython2.7']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -fvisibility=hidden... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-fvisibility=hidden', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/site-packages"', '-DHAVE_PYTHON_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -Wno-array-bounds... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-Wno-array-bounds', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/site-packages"', '-DHAVE_PYTHON_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for pybindgen location
+not found
+-----------------------------------------------------------------------------------------------------------------------------
+Python module pybindgen
+['/home/czt/anaconda3/envs/python27/bin/python', '-c', "\nimport pybindgen as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n    print(str(version))\nelse:\n    print('unknown version')\n"]
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+ImportError: No module named pybindgen
+
+not found
+from /home/czt/Desktop/Paraleon/bindings/python: Could not find the python module 'pybindgen'
+-----------------------------------------------------------------------------------------------------------------------------
+Checking boost includes
+from /home/czt/Desktop/Paraleon/src: headers not found, please provide a --boost-includes argument (see help)
+not found
+-----------------------------------------------------------------------------------------------------------------------------
+Checking boost includes
+from /home/czt/Desktop/Paraleon/src: headers not found, please provide a --boost-includes argument (see help)
+not found
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for click location
+not found
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program pkg-config
+not found
+find program=['pkg-config'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PKGCONFIG' -> ''
+from /home/czt/Desktop/Paraleon/src/config-store: Could not find the program pkg-config
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program pkg-config
+not found
+find program=['pkg-config'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PKGCONFIG' -> ''
+from /home/czt/Desktop/Paraleon/src/config-store: Could not find the program pkg-config
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_656b178ce7442053dff90315b31a1cc5/test.cpp -> build/.conf_check_656b178ce7442053dff90315b31a1cc5/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp: In function ‘int main(int, char**)’:
+../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
+  if ((uint128_t *) 0) return 0;
+       ^
+../test.cpp:5:18: error: expected primary-expression before ‘)’ token
+  if ((uint128_t *) 0) return 0;
+                  ^
+../test.cpp:5:20: error: expected ‘)’ before numeric constant
+  if ((uint128_t *) 0) return 0;
+                    ^
+../test.cpp:6:14: error: ‘uint128_t’ was not declared in this scope
+  if (sizeof (uint128_t)) return 0;
+              ^
+
+from /home/czt/Desktop/Paraleon/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Tools/c_config.py", line 459, in run_c_code
+    bld.compile()
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Build.py", line 188, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140071662734160: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/czt/Desktop/Paraleon/src/core: The configuration failed
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_ace1886511f08627ee2e4ca020806295/test.cpp -> build/.conf_check_ace1886511f08627ee2e4ca020806295/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_ace1886511f08627ee2e4ca020806295/testbuild/test.cpp.1.o -> build/.conf_check_ace1886511f08627ee2e4ca020806295/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_ace1886511f08627ee2e4ca020806295/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking high precision time implementation
+128-bit integer
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/test.cpp -> build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/test.cpp.1.o -> build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/test.cpp -> build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/test.cpp.1.o -> build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_61ecbfef21667d45a28decabe37fdf64/test.cpp -> build/.conf_check_61ecbfef21667d45a28decabe37fdf64/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+
+from /home/czt/Desktop/Paraleon/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Tools/c_config.py", line 459, in run_c_code
+    bld.compile()
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Build.py", line 188, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140071662348240: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/czt/Desktop/Paraleon/src/core: The configuration failed
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header sys/types.h
+==>
+#include <sys/types.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_8d38681417ac64f5b5b7d4ca87b0e4f3/test.cpp -> build/.conf_check_8d38681417ac64f5b5b7d4ca87b0e4f3/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_8d38681417ac64f5b5b7d4ca87b0e4f3/testbuild/test.cpp.1.o -> build/.conf_check_8d38681417ac64f5b5b7d4ca87b0e4f3/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_8d38681417ac64f5b5b7d4ca87b0e4f3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header sys/stat.h
+==>
+#include <sys/stat.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_8dd79274749d59bf459dfbeb1200c7d7/test.cpp -> build/.conf_check_8dd79274749d59bf459dfbeb1200c7d7/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_8dd79274749d59bf459dfbeb1200c7d7/testbuild/test.cpp.1.o -> build/.conf_check_8dd79274749d59bf459dfbeb1200c7d7/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_8dd79274749d59bf459dfbeb1200c7d7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header dirent.h
+==>
+#include <dirent.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_c94d96928742c001335a0559791a93d8/test.cpp -> build/.conf_check_c94d96928742c001335a0559791a93d8/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_c94d96928742c001335a0559791a93d8/testbuild/test.cpp.1.o -> build/.conf_check_c94d96928742c001335a0559791a93d8/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_c94d96928742c001335a0559791a93d8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_3a82ef2f96ebcc67f6086c98d2e6291e/test.cpp -> build/.conf_check_3a82ef2f96ebcc67f6086c98d2e6291e/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_3a82ef2f96ebcc67f6086c98d2e6291e/testbuild/test.cpp.1.o -> build/.conf_check_3a82ef2f96ebcc67f6086c98d2e6291e/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_3a82ef2f96ebcc67f6086c98d2e6291e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_48955ac54d2136a572805353a7b9b62d/test.cpp -> build/.conf_check_48955ac54d2136a572805353a7b9b62d/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_48955ac54d2136a572805353a7b9b62d/testbuild/test.cpp.1.o -> build/.conf_check_48955ac54d2136a572805353a7b9b62d/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_48955ac54d2136a572805353a7b9b62d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_2be466e82e703a744ee152afe2b58299/test.cpp -> build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/test.cpp.1.o -> build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/testprog
+[0m
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/test.cpp -> build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/test.cpp.1.o -> build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fa0c4ec9c63ac505501cc0863d9bdc48/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/test.cpp -> build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/test.cpp.1.o -> build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_7c67b81911f8bf0aede92c843d0e47cf/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_61ecbfef21667d45a28decabe37fdf64/test.cpp -> build/.conf_check_61ecbfef21667d45a28decabe37fdf64/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+
+from /home/czt/Desktop/Paraleon/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Tools/c_config.py", line 459, in run_c_code
+    bld.compile()
+  File "/home/czt/Desktop/Paraleon/.waf-1.7.11-edc6ccb516c5e3f9b892efc9f53a610f/waflib/Build.py", line 188, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140071662346320: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/czt/Desktop/Paraleon/src/core: The configuration failed
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for library rt
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_5ef57bc0d8aa3565949b6ce1186fd4a7/test.cpp -> build/.conf_check_5ef57bc0d8aa3565949b6ce1186fd4a7/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_5ef57bc0d8aa3565949b6ce1186fd4a7/testbuild/test.cpp.1.o -> build/.conf_check_5ef57bc0d8aa3565949b6ce1186fd4a7/testbuild/testprog
+[0m
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_5ef57bc0d8aa3565949b6ce1186fd4a7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_f00bb2460dc7019f64c1a347be5879fa/test.cpp -> build/.conf_check_f00bb2460dc7019f64c1a347be5879fa/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_f00bb2460dc7019f64c1a347be5879fa/testbuild/test.cpp.1.o -> build/.conf_check_f00bb2460dc7019f64c1a347be5879fa/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_f00bb2460dc7019f64c1a347be5879fa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for NSC location
+not found
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program pkg-config
+not found
+find program=['pkg-config'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PKGCONFIG' -> ''
+from /home/czt/Desktop/Paraleon/src/stats: Could not find the program pkg-config
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_79f849e1774b3cde8897857e178c7c8c/test.cpp -> build/.conf_check_79f849e1774b3cde8897857e178c7c8c/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_79f849e1774b3cde8897857e178c7c8c/testbuild/test.cpp.1.o -> build/.conf_check_79f849e1774b3cde8897857e178c7c8c/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_79f849e1774b3cde8897857e178c7c8c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program sudo
+/usr/bin/sudo
+find program=['sudo'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='SUDO' -> '/usr/bin/sudo'
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program valgrind
+not found
+find program=['valgrind'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='VALGRIND' -> ''
+from /home/czt/Desktop/Paraleon: Could not find the program valgrind
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program pkg-config
+not found
+find program=['pkg-config'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='PKGCONFIG' -> ''
+from /home/czt/Desktop/Paraleon: Could not find the program pkg-config
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-Wno-error=deprecated-declarations', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-std=gnu++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/czt/Desktop/Paraleon/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-----------------------------------------------------------------------------------------------------------------------------
+Checking for program doxygen
+not found
+find program=['doxygen'] paths=['/home/czt/anaconda3/envs/python27/bin', '/home/czt/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/snap/bin'] var='DOXYGEN' -> ''
+from /home/czt/Desktop/Paraleon: Could not find the program doxygen
